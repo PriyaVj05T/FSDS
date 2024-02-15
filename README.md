@@ -6,4 +6,12 @@
      - git add . 
 3. After staging commit the files
      - git commit -m "this is first commit"
-4.              
+4. create .gitignore file
+5. provide License
+6. Feching changes from github
+    - git pull
+7. source C:/Users/HP/anaconda3/Scripts/activate base    
+8. Creating environment by creating
+    - setup script "init_setup.sh"
+     - command "bash init_setup.sh" run in gitbash terminal
+9.                     
