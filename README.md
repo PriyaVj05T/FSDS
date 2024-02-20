@@ -10,8 +10,9 @@
 5. provide License
 6. Feching changes from github
     - git pull
-7. source C:/Users/HP/anaconda3/Scripts/activate base    
+7. source  source source C:/anaconda3/Scripts/activate base  
 8. Creating environment by creating
     - setup script "init_setup.sh"
      - command "bash init_setup.sh" run in gitbash terminal
-9.                     
+
+9.    conda activate./env                
