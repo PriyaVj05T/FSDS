@@ -27,7 +27,7 @@ class DataIngestion:
             data=pd.read_csv(Path(os.path.join("notebooks/data","diamond.csv")))
             logging.info("Data reading started")
 
-            os.makedirs(os.path.dirname(os.path.join("artifacts","raw.csv")),exist_ok =True)
+            os.makedirs(os.path.dirname(os.path.join("artifacts","raw.csv")),exist_ok =True) #Only creating folder not file in it
             data.to_csv(self.ingestion_config.raw_data_path, index=False)
             logging.info("Saved Raw data in artifacts folder")
             logging.info("Data splitting started")
@@ -45,7 +45,12 @@ class DataIngestion:
 
             logging.info("Data ingestion completed")
 
-
+            return (
+                    
+                    self.ingestion_config.train_data_path,
+                    self.ingestion_config.test_data_path
+                    
+                    )
         except Exception as e:
             logging.info("Exception occured during data ingestion stage")
             raise customexception(e,sys)
