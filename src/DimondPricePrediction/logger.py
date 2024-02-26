@@ -13,4 +13,7 @@ Log_file_path=os.path.join(log_path,LOG_FILE)
 logging.basicConfig(level=logging.INFO,
                     filename=Log_file_path,
                     format="[%(asctime)s] %(lineno)d %(name)s- %(levelname)s- %(message)s" 
+
                               )
+if __name__ =='__main__':
+    logging.info("This is a test message")
