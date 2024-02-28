@@ -19,15 +19,17 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()   
 
-    def initiate_model_training(self):
+    def initiate_model_training(self,train_arr,test_arr):
         try:
             logging.info('splitting dependent and independent variables from train and test data')
+
             X_train,y_train,X_test,y_test =(
-                train_array=[:,:-1],
-                 train_array=[:,-1],
-                  test_array=[:,:-1],
-                   test_array=[:,-1],
+                train_arr[:,:-1],
+                 train_arr[:,-1],
+                  test_arr[:,:-1],
+                   test_arr[:,-1]
             )
+            
             models={
                 'LinearRegression': LinearRegression(),
                 'Lasso':Lasso(),

@@ -31,7 +31,8 @@ class DataTransformation:
             clarity_categories=[ 'I1','SI2','SI1','VS2', 'VS1','VVS2','VVS1', 'IF'  ]
             color_categories=['D','E','F','G','H','I','J']
             logging.info("pipeline initiated")
-
+            #Extra precautions
+            #oe = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
 
             #pipelines for transformation
             ##Numerical pipeline
@@ -46,7 +47,7 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                     steps=[
                         ('imputer', SimpleImputer(strategy='most_frequent')),
-                        ('ordinalencoder',OrdinalEncoder(categories=[cut_categories,clarity_categories,color_categories])),
+                        ('ordinalencoder',OrdinalEncoder(categories=[cut_categories,clarity_categories,color_categories],handle_unknown='use_encoded_value', unknown_value=-1)),
                         ('scaler',StandardScaler())
 
                     ]
