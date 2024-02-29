@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Price Result</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.popup {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.popup h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.popup-content {
+    font-size: 24px;
+    color: #495057;
+}
+
+.popup-close {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-close:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="popup">
+        <h1>The diamond price will be {{final_result}}</h1>
+        <div class="popup-content">
+            <!-- Add any additional content here if needed -->
+        </div>
+        <button class="popup-close" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+// Function to close the popup
+function closePopup() {
+    window.close();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Price Prediction</title>
+<style>
+/* Your CSS styles here */
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Welcome to Your Diamond Price Prediction Page</h1>
+    </div>
+    
+    <div class="intro">
+        <h2>Please feel free to use it as much as you can</h2>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="/static/img/diamond1.jpg" alt="Diamond 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/diamond2.jpg" alt="Diamond 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/diamond3.jpg" alt="Diamond 3">
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <div class="action-button">
+        <button onclick="navigateToPredictPage()">Predict</button>
+    </div>
+</div>
+
+<script>
+// JavaScript for navigation
+function navigateToPredictPage() {
+    window.location.href = "/predict";
+}
+
+    // JavaScript for carousel functionality
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    
+    function showItem(index) {
+        items.forEach((item, i) => {
+            if (i === index) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    function nextItem() {
+        currentIndex++;
+        if (currentIndex >= items.length) {
+            currentIndex = 0;
+        }
+        showItem(currentIndex);
+    }
+    
+    function prevItem() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = items.length - 1;
+        }
+        showItem(currentIndex);
+    }
+    
+    // Initially show the first item
+    showItem(currentIndex);
+    </script>
+
+</body>
+</html>

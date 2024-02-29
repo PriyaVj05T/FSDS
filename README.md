@@ -15,4 +15,6 @@
     - setup script "init_setup.sh"
      - command "bash init_setup.sh" run in gitbash terminal
 
-9.    conda activate./env                
+9.    conda activate ./env                
+
+10. transform input data for prediction than load
